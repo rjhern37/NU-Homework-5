@@ -48,6 +48,8 @@ function timePassed(){
     var colors;
     var hours;
 
+    var moment = require ("moment");
+
 
 };
 
