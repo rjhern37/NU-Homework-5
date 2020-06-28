@@ -4,6 +4,10 @@
 var saveBtn = $('.saveBtn');
 var deleteBtn = $('.deleteBtn');
 
+var currentDayEl = $("#currentDay");
+
+currentDayEl.text(moment().format("MMMM Do YYYY, hh:mm:ss a"))
+
 
 // Function to add event info to local storage && to show a 'Event successfully saved' alert
 function save(){
