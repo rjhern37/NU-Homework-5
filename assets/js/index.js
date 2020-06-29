@@ -47,33 +47,20 @@ save();
 
 //Function to delete (reset) events that were previously saved to local storage && to show a 'Event successfully deleted' alert
 function reset(){
-    // var events = $('#eventInfo').val();
-
-
     deleteBtn.on('click', function(){
         var btnData = $(this).attr("delTime");
         console.log(btnData)
 
         var descriptionTarget = $("#eventInfo" + btnData);
-        localStorage.removeItem(descriptionTarget.attr("id"), descriptionTarget.val());
-        // $(".description").text("")
-        descriptionTarget.attr("id").text("");
+        localStorage.clear(descriptionTarget.attr("id"), descriptionTarget.val());
+        
         alert('You deleted an event.')
         });
-    
-
 };
 reset();
 
 
-//Function to display current day/Time on Jumbotron
-
-
-
-
-
-
-
+//Displays Events that are shaved to local storage (Given that there are events saved)
 $("#eventInfo7").text(localStorage.getItem("eventInfo7"));
 $("#eventInfo8").text(localStorage.getItem("eventInfo8"));
 $("#eventInfo9").text(localStorage.getItem("eventInfo9"));
